@@ -10,7 +10,12 @@ export ZSH="/home/e-ajas/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # muse, amuse, lambda,refined, steeef, arrow, fino, quezwhoz 
-ZSH_THEME="typewritten"
+#ZSH_THEME="typewritten"
+ZSH_THEME="spaceship"
+#SPACESHIP_RUBY_PREFIX="ruby:("
+#SPACESHIP_RUBY_SUFIX=") "
+#SPACESHIP_RUBY_SYMBOL=""
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
