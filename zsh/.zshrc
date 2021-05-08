@@ -124,3 +124,5 @@ export NVM_DIR="$HOME/.nvm"
 # Set typewritten ZSH as a prompt
 
 # Set typewritten ZSH as a prompt
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
