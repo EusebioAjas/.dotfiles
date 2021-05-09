@@ -12,6 +12,7 @@ else
 
     # install indentLine
     echo "Installing indentLine..."
+    cd ~/.vim
     git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
     vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 
@@ -21,5 +22,21 @@ else
     cd ~/.vim/pack/airblade/start
     git clone https://github.com/airblade/vim-gitgutter.git
     vim -u NONE -c "helptags vim-gitgutter/doc" -c q
+
+    # install pathogen
+    echo "Installing pathogen..."
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  
+    # install vim rails
+    echo "installing vim-rails..."
+    cd ~/.vim/bundle
+    git clone https://github.com/tpope/vim-rails.git
+    vim -u NONE -c "helptags vim-rails/doc" -c q
+
+    # install vim ruby
+    echo "Installing vim-ruby..."
+    cd ~/.vim
+    git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
 fi
 
