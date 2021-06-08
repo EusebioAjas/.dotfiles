@@ -1,4 +1,4 @@
-execute pathogen#infect()
+
 
 "vim-ruby
 set nocompatible      " We're running Vim, not Vi!
@@ -6,6 +6,8 @@ syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
+
+let g:EditorConfig_core_mode = 'external_command'
 
 " Set specific linters
 let g:ale_linters = {
@@ -22,6 +24,10 @@ let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 " Disable ALE auto highlights
 let g:ale_set_highlights = 0 
+
+
+" NERDTree show hidden files
+let NERDTreeShowHidden=1
 
 " key map for vim-ruby
 set expandtab
@@ -157,4 +163,10 @@ if !exists( "*RubyEndToken" )
 endif
 
 imap <buffer><CR> <C-R>=RubyEndToken()<CR>
+
+" Move visually selected lines up or down in various modes
+nnoremap J :m .+1<CR>==
+nnoremap K :m .-2<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 
