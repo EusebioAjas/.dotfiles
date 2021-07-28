@@ -10,4 +10,5 @@ fi
 
 # Create a new link called .tmux.conf which comes from ~/(pwd)/.tmux.conf
 echo "Create symlink for tmux configuration..."
-ln -sf ~/$(pwd)/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+
