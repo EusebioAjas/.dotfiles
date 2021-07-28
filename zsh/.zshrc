@@ -8,13 +8,11 @@ export ZSH="/home/e-ajas/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
 # muse, amuse, lambda,refined, steeef, arrow, fino, quezwhoz 
 #ZSH_THEME="typewritten"
 ZSH_THEME="spaceship"
-#SPACESHIP_RUBY_PREFIX="ruby:("
-#SPACESHIP_RUBY_SUFIX=") "
-#SPACESHIP_RUBY_SYMBOL=""
+
+SPACESHIP_CHAR_SYMBOL="➜ " 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # Set list of themes to pick from when loading at random
@@ -24,7 +22,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -107,6 +105,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# personal alias
+alias shn="sudo shutdown -h now"
+alias srn="sudo shutdown -r now"
+alias sps="sudo service postgresql stop"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -116,13 +118,5 @@ export NVM_DIR="$HOME/.nvm"
 # export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-
-# Set typewritten ZSH as a prompt
-
-# Set typewritten ZSH as a prompt
-
-# Set typewritten ZSH as a prompt
-
-# Set typewritten ZSH as a prompt
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
