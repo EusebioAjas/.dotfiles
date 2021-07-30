@@ -16,6 +16,7 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " vim-airline settings
@@ -96,6 +97,8 @@ inoremap jk <ESC>
 " Move visually selected lines up or down in various modes
 nnoremap K :m .-2<CR>==
 nnoremap J :m .+1<CR>==
+inoremap <A-k> <ESC>:m .-2<CR>==gi
+inoremap <A-j> <ESC>:m .+1<CR>==gi
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
