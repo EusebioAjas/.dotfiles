@@ -1,9 +1,7 @@
 #!/bin/sh
 
 #Check if neovim is intalled
-if which nvim >/dev/null; then
-  echo "neovim is already installed...!"
-else
+if [ command nvim 2>/dev/null ]; then
   echo "Installing neovim..."
   sudo add-apt-repository ppa:neovim-ppa/lastest
   sudo apt update
@@ -13,17 +11,11 @@ else
   echo "Create a symlink for neovim configuration..."
   ln -sf $(pwd)/.vimrc ~/.vimrc
 
-	# enhacement symlink when is created, TODO: create a folder
+	# enhacement symlink when is created
   echo "Create a symlink for init neovim config"
-  mkdir -p ~/.config/nvim
+  mkdir -p ~/.config/nvim/init.lua
   ln -sf $(pwd)/.config/nvim/init.vim ~/.config/nvim/init.vim
-
-	echo "Installing plug-vim"
-	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	ln -sf $(pwd)/.config/nvim/autoload/plug.vim ~/.config/nvim/autoload/plug.vim
-
-	echo "Create a symlink for plug-vim config"
-	mkdir -p ~/.config/nvim/vim-plug
- 	ln -sf $(pwd)/.config/nvim/vim-plug/plugins.vim ~/.config/nvim/vim-plug/plugins.vim
+else
+  echo "nvim is installed..!"
+  exit 1;
 fi
-
