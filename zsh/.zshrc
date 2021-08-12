@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 alias shn="sudo shutdown -h now"
 alias srn="sudo shutdown -r now"
 alias sps="sudo service postgresql stop"
+alias lg="lazygit"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
