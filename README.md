@@ -1,14 +1,14 @@
 # dotfiles
 Repository for personal dotfiles
 
-## git config
+## git
 * gitconfig
 * gitmessaege 
-
+## tmux
+* tmux-plugins
+* tmux.conf
 
 ## TODO list
 * .zshrc
-* .vimrc
-* .bashrc
-* .
+* Change nvim scripts
 
