@@ -1,11 +1,8 @@
 #!/bin/sh
 
 # Check if git is installed
-if [ command git 2>/dev/null ]; then
-  echo "Installing git..."
-  sudo add-apt-repository ppa:git-core/ppa
-  sudo apt update
-  sudo apt install git
+if command -v git &> /dev/null; then
+  echo "Setup user name and git message template..."
   # Create a new link called .gitconfig which comes from ~/(pwd)/.gitconfig
   echo "Create symlink for gitconfig..." 
   ln -sf $(pwd)/.gitconfig ~/.gitconfig
@@ -14,7 +11,7 @@ if [ command git 2>/dev/null ]; then
   echo "Create symlink for gitmessage..."
   ln -sf $(pwd)/.gitmessage ~/.gitmessage
 else
-  echo "git is installed...!"
+  echo "git is not installed...!"
   exit 1;
 fi
 
