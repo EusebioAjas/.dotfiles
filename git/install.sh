@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # Check if git is installed
-if command -v git &> /dev/null; then
+if command -v git &> /dev/null
+then
+  echo "git already is installed...!"
+else
+  echo "<git> could not found"
+
   echo "Setup user name and git message template..."
   # Create a new link called .gitconfig which comes from ~/(pwd)/.gitconfig
   echo "Create symlink for gitconfig..." 
@@ -10,9 +15,5 @@ if command -v git &> /dev/null; then
   # Create a new link called .gitmessage which comes from ~/(pwd)/.gitmessage
   echo "Create symlink for gitmessage..."
   ln -sf $(pwd)/.gitmessage ~/.gitmessage
-else
-  echo "git is not installed...!"
-  exit 1;
 fi
-
 
