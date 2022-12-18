@@ -7,8 +7,11 @@ Repository for personal dotfiles
 ## tmux
 * tmux-plugins
 * tmux.conf
-
-## TODO list
-* .zshrc
-* Change nvim scripts
-
+## nvim
+* lua
+* spell
+## vscode
+* keybindings
+* settings
+## zsh
+* zshrc
